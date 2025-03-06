@@ -1,0 +1,49 @@
+/* 整个页面容器的样式 */
+.container {
+  display: flex; /* 使用Flex布局 */
+  flex-direction: column; /* 子元素垂直排列 */
+  align-items: center; /* 水平居中对齐 */
+  background-color: #dad3db00; /* 背景颜色，透明度为0，即透明 */
+  padding: 20px; /* 内边距 */
+}
+
+/* 头部区域的样式 */
+.header {
+  margin-bottom: 20px; /* 与下方元素的间距 */
+}
+
+/* 标题的样式 */
+.title {
+  font-size: 24px; /* 字体大小 */
+  font-weight: bold; /* 字体加粗 */
+  color: #333; /* 字体颜色 */
+}
+
+/* 卡片样式，用于显示病人信息等 */
+.card {
+  width: 92%; /* 宽度 */
+  background-color: #fff; /* 背景颜色 */
+  padding: 15px; /* 内边距 */
+  margin-bottom: 15px; /* 与下方元素的间距 */
+  border-radius: 20px; /* 边框圆角 */
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* 阴影效果 */
+}
+
+/* 标签样式，用于显示信息的名称 */
+.label {
+  font-size: 18px; /* 字体大小 */
+  color: #666; /* 字体颜色 */
+}
+
+/* 值样式，用于显示信息的具体值 */
+.value {
+  font-size: 20px; /* 字体大小 */
+  font-weight: bold; /* 字体加粗 */
+  color: #333; /* 字体颜色 */
+  margin-top: 5px; /* 与上方元素的间距 */
+}
+
+/* 按钮样式 */
+button {
+  margin-top: 10px; /* 与上方元素的间距 */
+}

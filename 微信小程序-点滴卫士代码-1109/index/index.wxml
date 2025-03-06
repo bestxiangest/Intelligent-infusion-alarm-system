@@ -1,0 +1,77 @@
+<!-- 页面容器 -->
+<view class="container">
+  <!-- 头部区域 -->
+  <view class="header">
+    <!-- 标题 -->
+    <text class="title">点滴卫士</text>
+  </view>
+
+  <!-- 病人信息卡片区域 -->
+  <view class="card">
+    <!-- 病人姓名标签 -->
+    <view class="label">病人姓名:</view>
+    <!-- 病人姓名值 -->
+    <view class="value">花小椒</view>
+  </view>
+
+  <view class="card">
+    <!-- 年龄标签 -->
+    <view class="label">年龄:</view>
+    <!-- 年龄值 -->
+    <view class="value">52</view>
+  </view>
+
+  <view class="card">
+    <!-- 性别标签 -->
+    <view class="label">性别:</view>
+    <!-- 性别值 -->
+    <view class="value">男</view>
+  </view>
+
+  <view class="card">
+    <!-- 开始输液时间标签 -->
+    <view class="label">开始输液时间:</view>
+    <!-- 开始输液时间值，使用双花括号绑定数据 -->
+    <view class="value">{{patient.startTime}}</view>
+  </view>
+
+  <view class="card">
+    <!-- 结束输液时间标签 -->
+    <view class="label">结束输液时间:</view>
+    <!-- 结束输液时间值，使用双花括号绑定数据 -->
+    <view class="value">{{patient.endTime}}</view>
+  </view>
+  
+  <view class="card">
+    <!-- 剩余液位标签 -->
+    <view class="label">剩余液位:</view>
+    <!-- 剩余液位值，使用双花括号绑定数据，并显示百分比 -->
+    <view class="value">{{properties.level}}%</view>
+  </view>
+  
+  <view class="card">
+    <!-- 剩余预测时间标签 -->
+    <view class="label">剩余预测时间:</view>
+    <!-- 剩余预测时间值，使用双花括号绑定数据 -->
+    <view class="value">{{properties.timeLeft}}</view>
+  </view>
+
+  <view class="card">
+    <!-- 设备状态标签 -->
+    <view class="label">设备状态:</view>
+    <!-- 设备状态值，使用双花括号绑定数据 -->
+    <view class="value">{{properties.status}}</view>
+  </view>
+
+  <!-- 操作按钮区域 -->
+  <button bindtap="yell">呼叫</button>
+  <button bindtap="refresh">刷新</button>
+
+  <!-- 底部区域 -->
+  <view class="footer">
+    <!-- 分隔线 -->
+    <view>----------------------------------</view>
+    <!-- 更新时间显示，使用双花括号绑定数据 -->
+    <text>更新时间: {{properties.updateTime}}</text>
+  </view>
+</view>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>点滴卫士</title>
+    <style href="./styles.css"></style>
+    <div id="properties"></div>
+</head>
+<body>
+<button id="getProperties">Get Properties</button>
+    <script>
+        document.getElementById('getProperties').addEventListener('click', function() {
+            fetch('/getProperties')
+                .then(response => response.json())
+                .then(data => {
+                    console.log('level:', data.level);
+
+                    document.getElementById('properties').innerHTML = JSON.stringify(data);
+                })
+                .catch((error) => {
+                    console.error('Error:', error);
+                });
+        });
+    </script>
+</body>
+</html>
